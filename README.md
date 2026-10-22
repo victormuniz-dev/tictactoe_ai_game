@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="./assets/tictactoe.jpg" alt="Capa do Repositório" width="100%">
+</p>
+
 # ❌⭕ Jogo da Velha com IA — Algoritmo Minimax
 
 Implementei o algoritmo de busca adversarial **Minimax** no jogo da velha para a criação de um modelo de Inteligência Artificial que busca sempre a melhor jogada, maximizando o seu próprio potencial e minimizando o do adversário por meio de uma busca recursiva que prevê os movimentos futuros.
