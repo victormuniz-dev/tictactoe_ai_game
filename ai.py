@@ -1,11 +1,14 @@
+import random
+
 from board import check_winner, is_board_full, AI, PLAYER
 
 def minimax(b, depth, is_maximizing):
     # Stop conditions
-    if check_winner(b, AI): return 1
-    if check_winner(b, PLAYER): return -1
-    if is_board_full: return 0
+    if check_winner(b, AI): return 10 - depth
+    if check_winner(b, PLAYER): return depth - 10
+    if is_board_full(b): return 0
 
+    positions = range(9)
     if is_maximizing:
         max_eval = -float('inf')
         for i in range(9):
@@ -27,7 +30,7 @@ def minimax(b, depth, is_maximizing):
 
 def best_move(b):
     best_score = -float('inf')
-    move = -1
+    best_moves = []
     for i in range(9):
         if b[i] == " ":
             b[i] = AI
@@ -36,4 +39,8 @@ def best_move(b):
             if score > best_score:
                 best_score = score
                 move = i
-    return move
+                best_moves = [i]
+            elif score == best_score:
+                best_moves.append(i)
+
+    return random.choice(best_moves)

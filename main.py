@@ -10,8 +10,10 @@ def play_game():
     while True:
         if current_player == PLAYER:
             try:
-                move = int(input("Escolha dua posição (0-8): "))
-                if board[move] == " ":
+                move = int(input("Escolha sua posição (0-8): "))
+                if not 0 <= move <= 8:
+                    print("A posição precisa ser um número entre 0 e 8. Tente novamente!")
+                elif board[move] == " ":
                     board[move] = PLAYER
                     current_player = AI
                 else:
