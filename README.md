@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./assets/tictactoe.jpg" alt="Capa do Repositório" width="100%">
+  <img src="./tictactoe.jpg" alt="Capa do Repositório" width="100%">
 </p>
 
 # ❌⭕ Jogo da Velha com IA — Algoritmo Minimax
